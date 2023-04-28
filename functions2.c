@@ -38,9 +38,9 @@ length++;
 }
 
 if ((flags & F_ZERO) && !(flags & F_MINUS))
-		padd = '0';
+padd = '0';
 if (flags & F_PLUS)
-		extra_c = '+', length++;
+extra_c = '+', length++;
 else if (flags & F_SPACE)
 extra_c = ' ', length++;
 
@@ -120,7 +120,8 @@ UNUSED(precision);
 
 str = ")Null(";
 }
-for (i = 0; str[i]; i++);
+for (i = 0; str[i]; i++)
+;
 
 for (i = i - 1; i >= 0; i--)
 {
